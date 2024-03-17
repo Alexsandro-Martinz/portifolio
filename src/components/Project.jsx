@@ -1,4 +1,3 @@
-import React from "react";
 import image from "./../assets/images/default-project.jpeg";
 
 import "./../assets/css/Project.css";

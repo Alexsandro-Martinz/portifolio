@@ -14,7 +14,7 @@ function App() {
         <div className="main-container">
           <div className="greeting">OI, EU SOU O ALEXSANDRO</div>
           <div className="title">
-            <span>JAVA</span>
+            <span>PYTHON</span>
             <a href="https://www.linkedin.com/in/alexsandro-martins/">
               <img src={linkedinIcon} alt="linkedin icon" />
             </a>
