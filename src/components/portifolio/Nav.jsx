@@ -1,28 +1,38 @@
+import { useState } from "react";
+
+
 function Nav() {
+
+    const [expanded, setExpanded] = useState("");
+    const items = [
+        { name: "Home", link: "#" },
+        { name: "Projetos", link: "#item-1" },
+        { name: "Contatos", link: "#item-2" },
+        { name: "Sobre Mim", link: "#item-3" },
+    ];
+
+    const listItems = items.map((item) =>
+        // eslint-disable-next-line react/jsx-key
+        <li className="nav-item"
+            data-bs-toggle={expanded && "collapse"}
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            onClick={() => setExpanded("")}>
+            <a className="nav-link" href={item.link}>{item.name}</a>
+        </li>
+    )
+
     return (<>
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg bg-light fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Alexsandro Martins</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button onClick={() => setExpanded(expanded ? "" : " expanded")} className={"navbar-toggler" + expanded} type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse" id="navbar">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 col justify-content-end">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Projetos</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Sobre</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Contatos</a>
-                        </li>
-
+                        {listItems}
                     </ul>
-
                 </div>
             </div>
         </nav>
