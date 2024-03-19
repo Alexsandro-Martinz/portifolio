@@ -1,14 +1,14 @@
 import { useState } from "react";
-
+import "./Nav.css";
 
 function Nav() {
 
     const [expanded, setExpanded] = useState("");
     const items = [
-        { name: "Home", link: "#" },
-        { name: "Projetos", link: "#item-1" },
-        { name: "Contatos", link: "#item-2" },
-        { name: "Sobre Mim", link: "#item-3" },
+        { name: "Home", link: "#home" },
+        { name: "Projetos", link: "#projetos" },
+        { name: "Contatos", link: "#contatos" },
+        { name: "Sobre Mim", link: "#sobre-mim" },
     ];
 
     const listItems = items.map((item) =>
@@ -23,9 +23,9 @@ function Nav() {
     )
 
     return (<>
-        <nav className="navbar navbar-expand-lg bg-light fixed-top">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Alexsandro Martins</a>
+        <nav id="nav" className="shadow-sm navbar navbar-expand-lg bg-light fixed-top">
+            <div className="container-fluid px-3">
+                <a id="portifolio-link" className="navbar-brand" href="#">PORTIFÓLIO</a>
                 <button onClick={() => setExpanded(expanded ? "" : " expanded")} className={"navbar-toggler" + expanded} type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
