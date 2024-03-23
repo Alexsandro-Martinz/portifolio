@@ -6,7 +6,7 @@ function NavBarLayout() {
     return (
         <Navbar expand="lg" className="px-3 fixed-top bg-body-tertiary">
             <TabContainer>
-                <Navbar.Brand className="fw-500" id="nav-title" href="/">PORTIFÓLIO</Navbar.Brand>
+                <Navbar.Brand className="" id="nav-title" href="/">PORTIFÓLIO</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">

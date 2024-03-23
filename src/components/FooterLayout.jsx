@@ -15,7 +15,9 @@ function FooterLayout() {
                     <div className=" pt-1 col-sm-1 text-center">
                         <Link to={"https://www.linkedin.com/in/alexsandro-martins/"} className="mx-1"><i className="bi bi-linkedin h4"></i></Link>
                         <Link to={"https://github.com/Alexsandro-Martinz"} className="text-black mx-1"><i className="bi bi-github h4 bg-ligth"></i></Link>
-                        <Link to={"/src/assets/files/alexsandrodasilvamartins.docx"} target="_blank" download className="mx-1 text-black"><i className="bi bi-file-earmark-arrow-down h4"></i></Link>
+                        <Link rel="noreferrer" to="alexsandromartins.docx"
+                            target="_blank" className="mx-1 text-black">
+                            <i className="bi bi-file-earmark-arrow-down h4"></i></Link>
                     </div>
                 </div>
             </div>
