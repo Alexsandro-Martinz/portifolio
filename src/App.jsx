@@ -5,6 +5,7 @@ import Projects from "./pages/Project";
 import Contacts from "./pages/Contact";
 import About from "./pages/About";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
     return (
