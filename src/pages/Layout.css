@@ -1,0 +1,43 @@
+#layout-container {
+    height: 900px;;
+}
+
+.title {
+    margin-left: -4px;
+}
+
+.resumo {
+    letter-spacing: 1px;
+    margin-left: 40px;
+    font-size: 19px;
+    border-right: 8px solid gray;
+}
+
+.resumo span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 473px) { 
+    #layout-container {
+        height: 500px;;
+    }
+
+    .sobremim {
+        padding-top: 40px;
+    }
+
+    h1, p {
+    
+    }
+    
+    .about-left {
+        display: flex;
+        flex-direction: column;
+    }
+}

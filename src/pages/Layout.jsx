@@ -1,15 +1,18 @@
 import { Outlet } from "react-router-dom";
-import NavBarLayout from "../components/NavBarLayout";
-import FooterLayout from "../components/FooterLayout";
+import Nav from "./../components/Nav";
+import "./Layout.css";
+
 
 function Layout() {
     return (
-        <>
-            <NavBarLayout />
+        < div id="layout-container" className="container-fluid d-block p-0 m-0" >
+
+            <Nav />
             <Outlet />
-            <FooterLayout />
-        </>
+
+        </div >
     );
 }
 
 export default Layout;
+
