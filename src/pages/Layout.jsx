@@ -5,7 +5,7 @@ import "./Layout.css";
 
 function Layout() {
     return (
-        < div id="layout-container" className="container-fluid d-block p-0 m-0" >
+        < div id="layout-container" >
 
             <Nav />
             <Outlet />
