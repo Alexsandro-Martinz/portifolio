@@ -2,3 +2,7 @@
 body {
     background-color: #F8F8F8;
 }
+
+.container-base {
+    height: 680px;
+}
