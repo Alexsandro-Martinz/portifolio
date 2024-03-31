@@ -2,6 +2,8 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+import file from "../alexsandromartins.docx";
+
 
 function ButtonLink({ name, url }) {
     return (
@@ -10,20 +12,8 @@ function ButtonLink({ name, url }) {
         </li>)
 }
 
-const download = () => {
-    fetch("/alexsandromartins.docx")
-        .then((response) => {
-            response.blob().then((blob) => {
-                let url = window.URL.createObjectURL(blob);
-                let a = document.createElement("a");
-                a.href = url;
-                a.download = "alexsandromartins.docx";
-                a.click();
-            });
-        });
-}
-
 function ListIcons({ classBase, size }) {
+
     return (<>
         <li><a href="https://www.linkedin.com/in/alexsandro-martins/">
             <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className={"bi bi-linkedin " + classBase} viewBox="0 0 16 16">
@@ -37,7 +27,7 @@ function ListIcons({ classBase, size }) {
             </svg>
         </a></li>
 
-        <li><a className="text-success" onClick={download}>
+        <li><a className="text-success" href={file} download={"alexsandromartins.docx"}>
             <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className={"bi bi-arrow-down-square-fill " + classBase} viewBox="0 0 16 16">
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
             </svg>
@@ -46,6 +36,7 @@ function ListIcons({ classBase, size }) {
 }
 
 function Home() {
+
     return (
 
         <div className="h-50">
