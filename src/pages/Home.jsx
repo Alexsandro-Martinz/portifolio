@@ -1,15 +1,8 @@
 /* eslint-disable react/prop-types */
-import "./Home.css";
-import { Link } from "react-router-dom";
 import file from "../alexsandromartins.docx";
+import LinkTooltip from "../components/LinkTooltip";
+import "./Home.css";
 
-
-function ButtonLink({ name, url }) {
-    return (
-        <li className="nav-item mx-3">
-            <Link role="button" className="btn btn-outline-dark btn-sm" to={url}>{name}</Link>
-        </li>)
-}
 
 function ListIcons({ classBase, size }) {
 
@@ -26,7 +19,7 @@ function ListIcons({ classBase, size }) {
             </svg>
         </a></li>
 
-        <li><a className="text-success" href={file} download={"alexsandromartins.docx"}>
+        <li><a id="resume" className="text-success" href={file} download={"alexsandromartins.docx"}>
             <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className={"bi bi-arrow-down-square-fill " + classBase} viewBox="0 0 16 16">
                 <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0" />
             </svg>
@@ -35,15 +28,16 @@ function ListIcons({ classBase, size }) {
 }
 
 function Home() {
+    const homeStyleItem = "nav-item mx-3";
+    const homeStyleLink = "btn btn-outline-dark btn-sm";
 
     return (
-
-        <div className="h-50">
+        <div className="">
             <h1 className="display-1 text-center">BACKEND DEVELOPER</h1>
             <ul className="nav mt-5 justify-content-center h4">
-                <ButtonLink name="Projects" url="projects" />
-                <ButtonLink name="Contacts" url="contacts" />
-                <ButtonLink name="About" url="about" />
+                <LinkTooltip styleItem={homeStyleItem} styleLink={homeStyleLink} tooltip={"See my projects"} url={"projects"} text={"Projects"} />
+                <LinkTooltip styleItem={homeStyleItem} styleLink={homeStyleLink} tooltip={"Send me a message"} url={"contacts"} text={"Contacts"} />
+                <LinkTooltip styleItem={homeStyleItem} styleLink={homeStyleLink} tooltip={"Meet me more"} url={"about"} text={"About"} />
             </ul>
             <ul className="nav mt-5 justify-content-center h4">
                 <ListIcons classBase={"mx-3"} size={"30px"} />

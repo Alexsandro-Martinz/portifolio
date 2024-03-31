@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
+import LinkTooltip from "./LinkTooltip";
 import "./Nav.css";
 
 function Nav() {
 
-  const closeToggler = () => {
-    document.getElementById("toggler-btn").click();
-    return;
-  }
+  const navStyleItem = "nav-item";
+  const navStyleLink = "nav-link";
 
   return (
     <nav className=" navbar navbar-expand-lg bg-light border p-0 m-0 fixed-top">
@@ -17,18 +15,10 @@ function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to={""} onClick={closeToggler} className="nav-link">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"projects"} onClick={closeToggler} className="nav-link">Projects</Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"contacts"} onClick={closeToggler} className="nav-link">Contacts</Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"about"} onClick={closeToggler} className="nav-link pe-0">About</Link>
-            </li>
+            <LinkTooltip styleItem={navStyleItem} styleLink={navStyleLink} tooltip={"Go to home page"} url={""} text={"Home"} />
+            <LinkTooltip styleItem={navStyleItem} styleLink={navStyleLink} tooltip={"See my projects"} url={"projects"} text={"Projects"} />
+            <LinkTooltip styleItem={navStyleItem} styleLink={navStyleLink} tooltip={"Send me a message"} url={"contacts"} text={"Contacts"} />
+            <LinkTooltip styleItem={navStyleItem} styleLink={navStyleLink} tooltip={"Meet me more"} url={"about"} text={"About"} />
           </ul>
         </div>
       </div>
