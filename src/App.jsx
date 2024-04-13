@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter >
             <Routes>
                 <Route path="/portifolio" errorElement={<h2>Not Found!!</h2>} element={<Layout />}>
                     <Route index element={<Home />}></Route>
