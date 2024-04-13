@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import file from "../alexsandromartins.docx";
 import LinkTooltip from "../components/LinkTooltip";
-import "./Home.css";
 
 
 function ListIcons({ classBase, size }) {

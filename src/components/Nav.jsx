@@ -1,5 +1,5 @@
 import LinkTooltip from "./LinkTooltip";
-import "./Nav.css";
+
 
 function Nav() {
 
