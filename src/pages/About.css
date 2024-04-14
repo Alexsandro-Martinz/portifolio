@@ -4,13 +4,12 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px ) {
+@media (max-width: 768px ) {
     .about-title {
         font-size: 30px;
-        margin-top: 280px;
+        padding-top: 200px;
     }
 
     .about-container {
-        padding: 8px;
     }
 }
