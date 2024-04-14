@@ -1,10 +1,10 @@
 
 function About() {
     return (
-        <div className="about-container h-100">
-            <p className="about-title display-2 mt-4 text-center">Sobre mim</p>
+        <div className="about-container h-100" style={{ marginTop: "150px" }}>
+            <p style={{ marginBottom: "30px" }} className="about-title display-2 mt-4 text-center">Sobre mim</p>
 
-            <p>Sou um profissional apaixonado por desafios, com quase 2 anos de sólida experiência na Belov Engenharia, uma renomada empresa de Grande Porte no setor offshore, onde atuei como Líder de Manutenção Mecânica. Durante esse período, desenvolvi habilidades interpessoais notáveis, liderando equipes em ambientes desafiadores e garantindo a eficiência operacional.</p>
+            <p>Sou um profissional apaixonado por desafios, com mais 2 anos de sólida experiência na Belov Engenharia, uma renomada empresa de Grande Porte no setor offshore, onde atuei como Líder de Manutenção Mecânica. Durante esse período, desenvolvi habilidades interpessoais notáveis, liderando equipes em ambientes desafiadores e garantindo a eficiência operacional.</p>
 
             <p>Minha trajetória acadêmica inclui a atual busca por conhecimento na área de Engenharia da Computação, encontrando-me no 5º período na Unicarioca. Ao longo desses anos, tenho me dedicado intensamente ao estudo e prática da programação, consolidando minha aptidão técnica e prática em diversos projetos.</p>
 

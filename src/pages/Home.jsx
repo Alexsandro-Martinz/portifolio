@@ -31,7 +31,7 @@ function Home() {
     const homeStyleLink = "btn btn-outline-dark btn-sm";
 
     return (
-        <div className="">
+        <div className="pb-5 mb-5">
             <h1 className="display-1 text-center">BACKEND DEVELOPER</h1>
             <ul className="nav mt-5 justify-content-center h4">
                 <LinkTooltip styleItem={homeStyleItem} styleLink={homeStyleLink} tooltip={"See my projects"} url={"projects"} text={"Projects"} />
